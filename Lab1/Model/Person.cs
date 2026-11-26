@@ -18,12 +18,14 @@ namespace Model
         /// </summary>
         public const int MaximumAge = 120;
 
+        //TODO: refactor
         /// <summary>
         /// Шаблон имени или фамилии на английском языке.
         /// </summary>
         private static readonly Regex _latinNamePattern =
             new Regex(@"^[A-Za-z]+(?:[- ][A-Za-z]+)*$");
 
+        //TODO: refactor
         /// <summary>
         /// Шаблон имени или фамилии на русском языке.
         /// </summary>
@@ -45,6 +47,7 @@ namespace Model
         /// </summary>
         private int _age;
 
+        //TODO: refactor
         /// <summary>
         /// Пол персоны.
         /// </summary>
@@ -129,6 +132,7 @@ namespace Model
         /// </summary>
         public Gender Gender
         {
+            //TODO: refactor
             get
             {
                 return _gender;
@@ -155,6 +159,7 @@ namespace Model
             Gender = gender;
         }
 
+        //TODO: not safe
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Person"/>.
         /// </summary>
@@ -170,6 +175,7 @@ namespace Model
         {
             var person = new Person();
 
+            //TODO: duplication
             while (true)
             {
                 try
@@ -184,6 +190,7 @@ namespace Model
                 }
             }
 
+            //TODO: duplication
             while (true)
             {
                 try
@@ -198,6 +205,7 @@ namespace Model
                 }
             }
 
+            //TODO: duplication
             while (true)
             {
                 Console.Write("Введите возраст: ");
@@ -220,11 +228,13 @@ namespace Model
                 }
             }
 
+            //TODO: duplication
             while (true)
             {
                 Console.Write("Введите пол: 1 - мужской, 2 - женский: ");
                 string genderText = Console.ReadLine() ?? string.Empty;
 
+                //TODO: switch-case
                 if (genderText == "1")
                 {
                     person.Gender = Gender.Male;
@@ -243,6 +253,7 @@ namespace Model
             return person;
         }
 
+        //TODO: remove
         /// <summary>
         /// Выводит информацию о персоне на экран.
         /// </summary>
@@ -251,6 +262,7 @@ namespace Model
             Console.WriteLine(this);
         }
 
+        //TODO: remove
         /// <summary>
         /// Создаёт случайную персону.
         /// </summary>

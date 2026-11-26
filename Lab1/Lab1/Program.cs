@@ -49,6 +49,7 @@ namespace Lab1
             PrintPersonList("Второй список", youngerPersons);
 
             ShowReferenceCheck
+                //TODO: RSDN
                 (copiedPerson, youngerPersons.SearchPerson(youngerPersons.NumberOfPersons() - 1));
 
             WaitForNextStep();
@@ -98,12 +99,14 @@ namespace Lab1
             if (olderPersons == null)
             {
                 throw new ArgumentNullException
+                    //TODO: RSDN
                     (nameof(olderPersons), "Первый список персон не может быть пустым.");
             }
 
             if (youngerPersons == null)
             {
                 throw new ArgumentNullException
+                    //TODO: RSDN
                     (nameof(youngerPersons), "Второй список персон не может быть пустым.");
             }
 
@@ -322,6 +325,7 @@ namespace Lab1
                     continue;
                 }
 
+                //TODO: switch-case
                 if (answerNumber == 1)
                 {
                     return true;
